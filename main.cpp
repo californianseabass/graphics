@@ -1,4 +1,8 @@
-#include <GL/freeglut.h>
+#ifdef __linux
+  #include <GL/freeglut.h>
+#elif __APPLE__
+  #include <GLUT/glut.h>
+#endif
 #include <iostream>
 
 void displayMe(void)
